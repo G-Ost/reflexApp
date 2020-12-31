@@ -1,0 +1,223 @@
+*{
+  margin: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+.root{
+  display: block;
+}
+.game {
+  position: fixed;
+  top:50%;
+  left:50%;
+  height: 300px; 
+  width: 300px;
+  border: solid;
+  border-width: 5px;
+  margin-top: -150px;
+  margin-left: -150px;
+
+  }
+
+  .timer {
+      color: #666;
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+  
+  .game-done .message {
+    font-size: 250%;
+    font-weight: bold;
+    margin: 15px;
+  }
+
+
+  
+  .circles {
+    position: absolute;
+    margin:0;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    display:flex;
+    justify-content: space-between;
+    visibility: visible;
+  }
+  
+#svgCircle1, #svgCircle2, #svgCircle3, 
+#svgCircle4, #svgCircle5, #svgCircle6, 
+#svgCircle7, #svgCircle8, #svgCircle9{
+  position: fixed;
+  max-width: 70px;
+  max-height: 70px;
+  pointer-events: none;
+}
+
+
+
+.number{
+  visibility: hidden;
+  position: absolute;
+  height: 104px;
+  width: 104px;
+  top: 50%;
+  left: 50%;
+  margin:0;
+  background-color: transparent;
+  border:none;
+  font-size: 40px;
+  color:white;
+  pointer-events: none;
+}
+
+
+#number1,#number2,#number3,
+#number4,#number5,#number6,
+#number7,#number8,#number9,
+#clock
+{
+  position: fixed;
+  margin-top: -47px;
+  margin-left: -47.5px;
+}
+
+
+
+#circle1,#circle2,#circle3,#circle4,#circle5,#circle6,#circle7,#circle8,#circle9{
+pointer-events: auto;
+stroke-width: 4;
+}
+.menu{
+  height: 300px;
+  width: 300px;
+}
+
+#menuSvg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+
+
+#startNormalButton, #startSurivalButton, #helpButton,
+#helpMessage1,#helpMessage2 ,#normalWinMessage, 
+#backButton, #helpArrow1, #helpArrow2,
+#survivalWinMessage, #title{
+  position: absolute;
+  font-size: 22px;
+  color: white;
+  background-color: transparent;
+  border:transparent;
+}
+
+#title{
+  top: 20%;
+  text-align: center;
+  width: 300px;
+  font-weight: Bold;
+}
+
+#startNormalButton{
+  top: 38.3%;
+  width: 300px;
+}
+
+#startSurivalButton{
+  top: 56.6%;
+  width: 300px;
+}
+
+#helpButton{
+  top: 75%;
+  width: 300px;
+}
+
+#helpMessage1, #helpMessage2{
+  width: 300px;
+  top: 13%;
+  font-size: 18px;
+  text-align: center;
+}
+#helpMessage2{
+  font-size: 15.5px;
+}
+
+#helpArrow1, #helpArrow2{
+  position: relative;
+ text-align: center;
+ font-size: 30px;
+ top: 10.5px;
+}
+#helpArrow2{
+top: -8px;
+}
+
+#backButton{
+  top: 82%;
+  width: 300px;
+ }
+
+#normalWinMessage{
+  width: 300px;
+  top: 35%;
+  text-align: center;
+  font-size: 23px;
+}
+
+
+#survivalWinMessage{
+  width: 300px;
+  top: 25%;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+#clock{
+  position: relative;
+  color: black;
+  font-size: 25px;
+  background-color: transparent;
+  border:transparent;
+  top: 10px;
+  left: 50px;
+}
+
+#startNormalButton:hover,#startSurivalButton:hover, #helpButton:hover, 
+#backButton:hover, #helpArrow1:hover, #helpArrow2:hover  {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+
+#circle1:hover,#circle2:hover,#circle3:hover,
+#circle4:hover,#circle5:hover,#circle6:hover,
+#circle7:hover,#circle8:hover,#circle9:hover{
+  stroke:green;
+}
+
+
+#credits{
+  position: relative;
+  top: 55px;
+  width: 300px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+
+  #root { 
+    zoom: 1.4; 
+    -moz-transform: scale(1.4); 
+    -moz-transform-origin: 0 0;
+ 
+  }
+}
