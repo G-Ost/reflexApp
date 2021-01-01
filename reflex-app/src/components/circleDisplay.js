@@ -30,13 +30,14 @@ const CircleDisplay = props => {
     }
     // Function used onClick during survival mode, afert clicking on smallest number, number is being randomly replaced and additional time is added to the clock
     function survivalMode(clickedCircle) {
+        let randomNumbers = [];
         if (props.numbers[clickedCircle - 1] === findMin(props.numbers)) {
             return (
                 props.setScore(props.score + 1),
-                props.pool.push(props.numbers[clickedCircle - 1]),
                 props.setSurvivalTimer(props.survivalTimer + 0.25),
-                props.numbers[clickedCircle - 1] = props.pool.splice(Math.floor(Math.random() * props.pool.length), 1)[0],
-                props.setNumbers([...props.numbers])
+                props.pool.push(...props.numbers),
+                utils.draw(randomNumbers, props.pool),
+                props.setNumbers(randomNumbers)
             )
 
         }
@@ -62,6 +63,7 @@ const CircleDisplay = props => {
                         switch (props.gameMode) {
                             case "normal": return gameModes.normal(circleNumber);
                             case "survival": return gameModes.survival(circleNumber);
+                            default: return null;
                         }
                     }}
                 />

@@ -14,11 +14,11 @@ const MenuDisplay = props => {
                 REFLEX TRAINER
             </p>
 
-            <button id={`startNormalButton`} style={{ visibility: props.visibility }} onClick={() => (props.setGameMode("normal"), props.gameStart("normal"))}>
+            <button id={`startNormalButton`} style={{ visibility: props.visibility }} onClick={() => { return (props.setGameMode("normal"), props.gameStart("normal")) }}>
                 START NORMAL MODE
             </button>
 
-            <button id={`startSurivalButton`} style={{ visibility: props.visibility }} onClick={() => (props.setGameMode("survival"), props.gameStart("survival"))} >
+            <button id={`startSurivalButton`} style={{ visibility: props.visibility }} onClick={() => { return (props.setGameMode("survival"), props.gameStart("survival")) }} >
                 START SURVIVAL MODE
             </button>
 

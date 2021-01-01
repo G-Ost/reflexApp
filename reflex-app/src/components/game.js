@@ -40,13 +40,13 @@ const Game = props => {
     // After value is clicked is being replaced by "", reducedNumbers checks if this is the only value in array
     let reducedNumbers = [...new Set(numbers)];
     // Here program checks if conditions of wining normal mode are fulffiled
-    let normalCondition = reducedNumbers.length === 1
+    (() => (reducedNumbers.length === 1
         ? (clearInterval(time.clockNormal), setNumbers([]), setNumberVisibility("hidden"), winNormalMode())
-        : null;
+        : null))();
     // Here program checks if conditions of finishing survival mode are fulffiled, that is if time is over
-    let survivalCondition = survivalTimer < 0
+    (() => (survivalTimer < 0
         ? (endSurvivalMode())
-        : null;
+        : null))();
 
     // Function starting time count in normal mode
     function startClock() {
@@ -91,7 +91,8 @@ const Game = props => {
         let el = document.getElementById("menuCircle");
         setMenuVisibility("hidden");
         utils.circleSizeChanger("0", 0.7, el);
-        setTimeout(() => (utils.spread("circle"), utils.spread("number")), 500);
+        setTimeout(() => (utils.spread("circle")), 500);
+        setTimeout(() => (utils.spread("number")), 500);
         time.start = new Date().getTime() + 1200;
         setTimeout(() => (setNumberVisibility("visible")), 1300);
 
@@ -106,7 +107,8 @@ const Game = props => {
         utils.focus("number");
         let el = document.getElementById("menuCircle");
         setTimeout(() => (utils.circleSizeChanger(140, 0.7, el)), 1000);
-        setTimeout(() => (setVisibilityNormalWin("visible"), setVisibilityBackButton("visible")), 1700);
+        setTimeout(() => (setVisibilityBackButton("visible")), 1700);
+        setTimeout(() => (setVisibilityNormalWin("visible")), 1700);
     }
 
     // What happens when time in survival mode runs out
@@ -119,7 +121,8 @@ const Game = props => {
         utils.focus("number");
         let el = document.getElementById("menuCircle");
         setTimeout(() => (utils.circleSizeChanger(140, 0.7, el)), 1000);
-        setTimeout(() => (setVisibilitySurvivalWin("visible"), setVisibilityBackButton("visible")), 1700);
+        setTimeout(() => (setVisibilitySurvivalWin("visible")), 1700);
+        setTimeout(() => (setVisibilityBackButton("visible")), 1700);
     }
 
 
@@ -159,8 +162,8 @@ const Game = props => {
             solveTime={solveTime}
             visibilityHelp1={visibilityHelp1}
             visibilityHelp2={visibilityHelp2}
-            showHelp1={() => (setVisibilityHelp1("visible"), setVisibilityHelp2("hidden"), setMenuVisibility("hidden"), setVisibilityBackButton("visible"))}
-            showHelp2={() => (setVisibilityHelp1("hidden"), setVisibilityHelp2("visible"))}
+            showHelp1={() => { return (setVisibilityHelp1("visible"), setVisibilityHelp2("hidden"), setMenuVisibility("hidden"), setVisibilityBackButton("visible")) }}
+            showHelp2={() => { return (setVisibilityHelp1("hidden"), setVisibilityHelp2("visible")) }}
             score={score}
             scoreMessage={scoreMessage}
         />

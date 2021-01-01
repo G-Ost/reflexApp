@@ -4,8 +4,8 @@ const utils = {
 
     setTranslate: function (xPos, yPos, id, t) {
         let el = document.getElementById(id);
-        el.style.transform = "translate3d(" + xPos + "px" + ", " + yPos + "px, 0)";
-        el.style.transition = t + "s " + "ease-in-out";
+        el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+        el.style.transition = `${t}s ease-in-out`;
     },
 
 
@@ -43,7 +43,7 @@ const utils = {
 
     circleSizeChanger: function (size, t, el) {
         el.setAttribute("r", size);
-        el.style.transition = t + "s " + "ease-in-out";
+        el.style.transition = `${t}s ease-in-out`;
     }
 
 };
