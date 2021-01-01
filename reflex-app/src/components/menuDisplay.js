@@ -56,7 +56,7 @@ const MenuDisplay = props => {
             <p id={`helpMessage2`} style={{ visibility: props.visibilityHelp2 }}>
                 SURVIVAL MODE:<br /><br /><br />
                 In this mode, time is limited and values<br />
-                 are being continuously replenished. <br /><br />
+                 are being continuously randomized. <br /><br />
                 Wrong choices cost you time.<br />
                 Correct ones result in extra time. <br /> <br />
                 How many points can you score?<br />
