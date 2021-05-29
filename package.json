@@ -1,7 +1,7 @@
 {
   "name": "reflexapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Link do online app (mind that heroku sometimes need time to load): https://reflex-trainer-gost.herokuapp.com/.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
