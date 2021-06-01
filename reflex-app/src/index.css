@@ -1,0 +1,86 @@
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#frame{
+  position: absolute;
+  border: solid;
+  top: 50%;
+  left: 50%;
+  border-width: 10px;
+}
+
+#bigCircle{
+  position: absolute;
+  border: solid;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  background-color: black;
+}
+
+#menu{
+  position: absolute;
+  color:white;
+  top: 50%;
+  left: 50%;
+}
+
+.instructionArrow{
+  background: none;
+  color: white;
+  border: none;
+
+}
+
+.instructionArrow, #instructionsHeader, #normalHeader,#survivalHeader, #goBackButton{
+  cursor: pointer;
+  }
+  
+
+ 
+  #resetGameButton:hover,#exitGameButton:hover,.instructionArrow:hover, #instructionsHeader:hover, #normalHeader:hover,#survivalHeader:hover, #goBackButton:hover{
+text-decoration: underline;
+}
+
+.circles{
+  border-radius: 100%;
+  color: white;
+  background-color: black;
+  top:50%;
+  left: 50%;
+  border: none;
+}
+
+.circles:hover{
+transition-duration: 0ms;
+border-color:greenyellow;
+border-style:solid;
+}
+ 
+#resetGameButton{
+  color: white;
+  background-color: black;
+  border:none
+}
+
